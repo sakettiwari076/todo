@@ -1,7 +1,26 @@
+import { useState } from "react";
 const index = () => {
+  const [items, setItems] = useState([
+    "Buy milk",
+    "Buy rice",
+    "Buy clothes"
+    
+  ]);
 return (
   <>
-  <h1> I am the first ui</h1>
+ <div>
+<h1>Todo App </h1>
+<div>
+  <input type = "text" />
+  <button type = "button">Add</button>
+</div>
+<ul>
+  {items.map((item) => (
+    <li key = {item} > {item}</li>
+  ))}
+
+</ul>
+ </div>
   </>
 );
 } ;
