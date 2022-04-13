@@ -1,12 +1,13 @@
 import cx from "classnames";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-
+import { useUser } from "@auth0/nextjs-auth0";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
   const [todoItem, setTodoItem] = useState("");
   const [items, setItems] = useState([]);
+  const { user , isLoading , error  } = useUser();
 
   const handleEnter = (event) => {
     if (event.key === "Enter") {
@@ -45,49 +46,59 @@ const Home = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto text-center">
-      <div className="pt-12">
-        <h1 className="text-4xl todohead">Todo App</h1>
-      </div>
+    // login / logout links logic  
+    <><div className="piii">
+      {user ? (<a href="api/auth/logout"> Logout </a>
+      ) : (
+        <a href="api/auth/login">Login</a>
+      )}
+          {/* // login / logout links logic    */}
 
-      <div className="pt-12">
-        <input
-          type="text"
-          value={todoItem}
-          className="w-full rounded py-2 px-4 text-gray-900"
-          onChange={(e) => setTodoItem(e.target.value)}
-          onKeyDown={handleEnter}
-        />
-      </div>
+    </div><div className="w-3/4 mx-auto text-center">
+        <div className="pt-12">
+          <h1 className="text-4xl todohead">Todo App</h1>
+        </div>
 
-      <ul className="pt-12">
-        {items
-          .filter(({ done }) => !done)
-          .map(({ id, message }) => (
-            <li
-              key={id}
-              className={cx(styles.item)}
-              onClick={() => handleDone(id)}
-            >
-              {message}
-            </li>
-          ))}
+        <div className="pt-12">
+          <input
+            type="text"
+            value={todoItem}
+            className="w-full rounded py-2 px-4 text-gray-900"
+            onChange={(e) => setTodoItem(e.target.value)}
+            onKeyDown={handleEnter} />
+        </div>
 
-        {items
-          .filter(({ done }) => done)
-          .map(({ id, message }) => (
-            <li
-              key={id}
-              className={cx(styles.item, styles.done)}
-              onClick={() => handleDone(id)}
-            >
-              {message}
-            </li>
-          ))}
-      </ul>
-      <button type="button">Instructions</button>
+        <ul className="pt-12">
+          {items
+            .filter(({ done }) => !done)
+            .map(({ id, message }) => (
+              <li
+                key={id}
+                className={cx(styles.item)}
+                onClick={() => handleDone(id)}
+              >
+                {message}
+              </li>
+            ))}
 
-    </div>
+          {items
+            .filter(({ done }) => done)
+            .map(({ id, message }) => (
+              <li
+                key={id}
+                className={cx(styles.item, styles.done)}
+                onClick={() => handleDone(id)}
+              >
+                {message}
+              </li>
+            ))}
+        </ul>
+        <button type="button" className="instructionbtn">Instructions</button>
+        
+
+
+      </div></>
+    
   );
 };
 
