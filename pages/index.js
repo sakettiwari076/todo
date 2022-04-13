@@ -55,15 +55,21 @@ const Home = () => {
           {/* // login / logout links logic    */}
 
     </div><div className="w-3/4 mx-auto text-center">
-        <div className="pt-12">
-          <h1 className="text-4xl todohead">Todo App</h1>
+        <div className="pt-12  ">
+          <h1 className="text-4xl todohead">- Todo App -</h1>
+          {/* <button type="button" className="instructionbtn">Instructions</button>  */}
+          
+          <img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg" ></img>
+<img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg2" ></img>
         </div>
-
+        <p className="todoqoutes 	 "> “Each day I will accomplish one thing on my to do list.”
+</p>
+  <p className="enter pt-8  ">-PRESS ENTER TO ADD TODO ITEM-</p>
         <div className="pt-12">
           <input
             type="text"
             value={todoItem}
-            className="w-full rounded py-2 px-4 text-gray-900"
+            className="w-full rounded py-2 px-4 text-gray-900 "
             onChange={(e) => setTodoItem(e.target.value)}
             onKeyDown={handleEnter} />
         </div>
@@ -93,7 +99,6 @@ const Home = () => {
               </li>
             ))}
         </ul>
-        <button type="button" className="instructionbtn">Instructions</button>
         
 
 

@@ -1,11 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&family=Dongle:wght@300&family=Inconsolata:wght@300&family=Josefin+Sans:wght@200;300;500&family=Luxurious+Roman&family=Nunito+Sans:wght@200&family=Open+Sans&family=Playfair+Display:wght@400;500&family=Roboto+Condensed:wght@300&family=Source+Serif+Pro:ital,wght@0,600;1,600&display=swap');
-.todohead {
-  font-family: 'Nunito Sans', sans-serif;  
-  /* font-family: 'Be Vietnam Pro', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');  */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+.todohead {
+  /* font-family: 'Nunito Sans', sans-serif;   
+   */
+  /* font-family: 'Be Vietnam Pro', sans-serif;  */
+  font-family: 'Anek Odia', sans-serif;
+ 
 }
 .instructionbtn {
   font-family: 'Nunito Sans', sans-serif;  
 position: relative;
 top: 5rem;
 }
+.todoqoutes {
+  font-family: 'Square Peg', cursive;
+  font-size: 2rem;
+}
+.todoimg {
+  height: 5rem;
+  position: absolute;
+    top: 4rem;
+    /* padding-left: 15rem;
+     */
+     left: 31rem;
+}
+.todoimg2 {
+  height: 5rem;
+  position: absolute;
+    top: 4rem;
+    right: 30.2rem;
+
+}
+/* media  */
+@media screen and  (max-width: 1600px) {
+  .todoimg {
+    display: none;
+  }
+  .todoimg2 {
+    display: none;
+  }
+}
+.enter {
+  font-family: 'Quicksand', sans-serif;
+}
+
