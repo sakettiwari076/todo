@@ -56,7 +56,7 @@ const Home = () => {
 
     </div><div className="w-3/4 mx-auto text-center">
         <div className="pt-12  ">
-          <h1 className="text-4xl todohead">- Todo App -</h1>
+          <h1 className=" todohead">- Todo App -</h1>
           {/* <button type="button" className="instructionbtn">Instructions</button>  */}
           
           <img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg" ></img>
@@ -64,7 +64,7 @@ const Home = () => {
         </div>
         <p className="todoqoutes 	 "> “Each day I will accomplish one thing on my to do list.”
 </p>
-  <p className="enter pt-8  ">-PRESS ENTER TO ADD TODO ITEM-</p>
+  <p className="enter pt-8  ">PRESS ENTER TO ADD TODO ITEMS AND CLICK ON THE ITEMS WHEN DONE.</p>
         <div className="pt-12">
           <input
             type="text"
