@@ -63,7 +63,7 @@ const Home = () => {
           {/* <button type="button" className="instructionbtn">Instructions</button>  */}
           
           <img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg" ></img>
-<img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg2" ></img>
+          <img src="https://cdn-icons.flaticon.com/png/512/2158/premium/2158507.png?token=exp=1649882968~hmac=6f38f53e7a6fff22b09f289f9fbebee2"className="todoimg2" ></img>
         </div>
         <p className="todoqoutes 	 "> “Each day I will accomplish one thing on my to do list.”
 </p>
@@ -72,7 +72,7 @@ const Home = () => {
           <input
             type="text"
             value={todoItem}
-            className="w-full rounded py-2 px-4 text-gray-900 "
+            className="w-full rounded py-2 font-bold 	tracking-wide	 px-4 text-gray-900 "
             onChange={(e) => setTodoItem(e.target.value)}
             onKeyDown={handleEnter} />
         </div>
@@ -102,9 +102,6 @@ const Home = () => {
               </li>
             ))}
         </ul>
-        
-
-
       </div></>
     
   );
