@@ -1,4 +1,4 @@
-//  goto 
+
 import { withData }  from 'next-apollo' 
 import {HttpLink } from 'apollo-link-http' 
 

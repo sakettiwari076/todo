@@ -30,4 +30,4 @@ const gettingdata = ({authors}) => {
 </Query>
     );
 };
-export default withData(gettingdata);
+export default gettingdata;
