@@ -5,7 +5,7 @@ import { UserProvider } from '@auth0/nextjs-auth0';
 
 function MyApp({ Component, pageProps }) {
   return (
-  <div className='h-screen  bg-gray-900 text-gray-100'>
+  <div className='h-auto  bg-gray-900 text-gray-100'>
     <UserProvider>
    <Component {...pageProps} />
    </UserProvider>

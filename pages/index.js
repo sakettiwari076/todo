@@ -48,10 +48,12 @@ const Home = () => {
   return (
     // login / logout links logic  
     <><div className="piii">
-      {user ? (
-      <a href="api/auth/logout" > Logout </a>
+      {user ? ( 
+        <><div className="userinfo  ">
+          <p> {user.name} </p>
+        </div><a href="api/auth/logout"> <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Logout</button></a></>
       ) : (
-        <a href="api/auth/login">Login</a>
+        <a href="api/auth/login"> <button className = "bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"> Login</button></a>
       )}
           {/* // login / logout links logic    */}
 
