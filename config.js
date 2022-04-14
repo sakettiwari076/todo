@@ -1,0 +1,1 @@
+//  goto https://medium.com/hackernoon/how-to-integrate-next-js-and-hasura-4a964424db6d 

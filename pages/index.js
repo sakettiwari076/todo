@@ -48,7 +48,8 @@ const Home = () => {
   return (
     // login / logout links logic  
     <><div className="piii">
-      {user ? (<a href="api/auth/logout"> Logout </a>
+      {user ? (
+      <a href="api/auth/logout" > Logout </a>
       ) : (
         <a href="api/auth/login">Login</a>
       )}
